@@ -1,0 +1,69 @@
+<div class="card">
+  <div class="card-header">
+    <h1>{{ client.nomClient }} {{ client.prenomClient }}</h1>
+    <ul class="nav nav-tabs card-header-tabs" id="nav-tab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-item nav-link active" [ngClass]="{'show active': activeTab === 'home'}" id="nav-home-tab" (click)="switchTab('home')" role="tab" aria-controls="nav-home" aria-selected="true" style="cursor: pointer !important;">Details</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-item nav-link" [ngClass]="{'show active': activeTab === 'mesure'}" id="nav-mesure-tab" (click)="switchTab('mesure')" role="tab" aria-controls="nav-mesure" aria-selected="true" style="cursor: pointer !important;">Mesure</a>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="client" class="card-body">
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade" [ngClass]="{'show active': activeTab === 'home'}" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div  class="card" style="width: 30rem;" >
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>ID:</strong> {{ client.idClient }}</li>
+            <li class="list-group-item"><strong>Nom:</strong> {{ client.nomClient }}</li>
+            <li class="list-group-item"><strong>Prenom:</strong> {{ client.prenomClient }}</li>
+            <li class="list-group-item"><strong>CNI:</strong> {{ client.cniClient }}</li>
+            <li class="list-group-item"><strong>Email:</strong> {{ client.email }}</li>
+            <li class="list-group-item"><strong>Adresse:</strong> {{ client.adresse }}</li>
+            <li class="list-group-item"><strong>Sexe:</strong> {{ client.sexe }}</li>
+          </ul>
+        </div>
+        <br>
+        <button (click) = "updateClient(client.idClient)" class="btn btn-dark m-1">Modifier</button>
+      </div>
+
+      <div class="tab-pane fade" [ngClass]="{'show active': activeTab === 'mesure'}" role="tabpanel" aria-labelledby="nav-mesure-tab">
+        <div class="row p-0">
+          <div class="col-sm">
+            <div class="card" style="width: 40rem;" >
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Tete:</strong> {{ mesure.tete }}</li>
+                <li class="list-group-item"><strong>Cou:</strong> {{ mesure.cou }}</li>
+                <li class="list-group-item"><strong>Epaule:</strong> {{ mesure.epaule }}</li>
+                <li class="list-group-item"><strong>Poitrine:</strong> {{ mesure.poitrine }}</li>
+                <li class="list-group-item"><strong>Hanches:</strong> {{ mesure.hanches }}</li>
+                <li class="list-group-item"><strong>Cuisse:</strong> {{ mesure.cuisse }}</li>
+                <li class="list-group-item"><strong>Genou:</strong> {{ mesure.genou }}</li>
+                <li class="list-group-item"><strong>CoutureExt:</strong> {{ mesure.coutureExt }}</li>
+                <li class="list-group-item"><strong>LCorps:</strong> {{ mesure.lcorps }}</li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm">
+            <div class="card" style="width: 40rem;" >
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><strong>Mollet:</strong> {{ mesure.mollet }}</li>
+                <li class="list-group-item"><strong>Cheville:</strong> {{ mesure.cheville }}</li>
+                <li class="list-group-item"><strong>Biceps:</strong> {{ mesure.biceps }}</li>
+                <li class="list-group-item"><strong>Coude:</strong> {{ mesure.coude }}</li>
+                <li class="list-group-item"><strong>Avant Bras:</strong> {{ mesure.avantBras }}</li>
+                <li class="list-group-item"><strong>Poignet-Coude:</strong> {{ mesure.poignetCoude }}</li>
+                <li class="list-group-item"><strong>Entre Jambe:</strong> {{ mesure.entreJambe }}</li>
+                <li class="list-group-item"><strong>lbras:</strong> {{ mesure.lbras }}</li>
+                <li class="list-group-item"><strong>HTotale:</strong> {{ mesure.htotale }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br>
+        <button (click) = "updateClientMesure(client.idClient)" class="btn btn-dark m-1">Modifier</button>
+      </div>
+    </div>
+  </div>
+</div>

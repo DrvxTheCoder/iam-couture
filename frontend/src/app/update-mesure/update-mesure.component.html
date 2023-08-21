@@ -1,0 +1,111 @@
+<div *ngIf="client" class="card">
+
+    <div class="card-header">
+      <h2>Modifier Mesure - {{ client.prenomClient }} {{ client.nomClient }}</h2>
+    </div>
+    <div class="card-body">
+      <form class="form p-3" [formGroup]="updateMesureForm" (ngSubmit)="onSubmit()">
+        <div >
+        <fieldset>
+        <!-- Nom et Prenom -->
+        <div class="row">
+          <div class="col">
+            <label for="tete">Tête:</label>
+            <input type="number" class="form-control" placeholder="Tete" id="tete" formControlName="tete" required>
+          </div>
+          <div class="col">
+            <label for="cou">Cou:</label>
+            <input type="number" class="form-control" placeholder="Cou" id="cou" formControlName="cou"   required>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <label for="epaule">Epaule:</label>
+                <input type="number" class="form-control mt-1" placeholder="Epaule" id="epaule" formControlName="epaule"  required>
+            </div>
+            <div class="col">
+              <label for="lbras">Lbras:</label>
+                <input type="number" class="form-control mt-1" placeholder="LBras" id="lbras" formControlName="lbras"  required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                <label for="lbras">Poitrine:</label>
+                <input type="number" class="form-control mt-1" placeholder="Poitrine" id="poitrine" formControlName="poitrine"  required>
+            </div>
+            <div class="col">
+                <label for="lbras">Hanches:</label>
+                <input type="number" class="form-control mt-1" placeholder="Hanches" id="hanches" formControlName="hanches"  required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                <label for="lbras">Cuisse:</label>
+                <input type="number" class="form-control mt-1" placeholder="Cuisse" id="cuisse" formControlName="cuisse"  required>
+            </div>
+            <div class="col">
+                <label for="lbras">Lcorps:</label>
+                <input type="number" class="form-control mt-1" placeholder="Lcorps" id="lcorps" formControlName="lcorps"  required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                <label for="lbras">Genou:</label>
+                <input type="number" class="form-control mt-1" placeholder="Genou" id="genou" formControlName="genou"  required>
+            </div>
+            <div class="col">
+                <label for="lbras">Mollet:</label>
+                <input type="number" class="form-control mt-1" placeholder="Mollet" id="mollet" formControlName="mollet"  required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                <label for="lbras">Cheville:</label>
+                <input type="number" class="form-control mt-1" placeholder="Cheville" id="cheville" formControlName="cheville"  required>
+            </div>
+            <div class="col">
+                <label for="lbras">Biceps:</label>
+                <input type="number" class="form-control mt-1" placeholder="Biceps" id="biceps" formControlName="biceps"  required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                <label for="lbras">Coude:</label>
+                <input type="number" class="form-control mt-1" placeholder="Coude" id="coude" formControlName="coude"  required>
+            </div>
+            <div class="col">
+                <label for="lbras">Avant Bras:</label>
+                <input type="number" class="form-control mt-1" placeholder="Avant Bras" id="avantBras" formControlName="avantBras"  required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                <label for="lbras">Poignet Coude:</label>
+                <input type="number" class="form-control mt-1" placeholder="Poignet Coude" id="poignetCoude" formControlName="poignetCoude"  required>
+            </div>
+            <div class="col">
+                <label for="lbras">Entre Jambe:</label>
+                <input type="number" class="form-control mt-1" placeholder="Entre Jambe" id="entreJambe" formControlName="entreJambe"  required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+                <label for="lbras">Couture Ext:</label>
+                <input type="number" class="form-control mt-1" placeholder="Couture Ext" id="coutureExt" formControlName="coutureExt"  required>
+            </div>
+            <div class="col">
+                <label for="lbras">Htotale:</label>
+                <input type="number" class="form-control mt-1" placeholder="Htotale" id="htotale" formControlName="htotale"  required>
+            </div>
+          </div>
+        <div class="row">
+            <div class="col">
+                <button type="submit" class="btn btn-dark mt-3">Valider</button>
+            </div>
+            
+        </div>
+        </fieldset>
+        </div>
+      </form>
+    </div>
+  </div>
